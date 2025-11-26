@@ -12,7 +12,6 @@ public class Kafe01 {
             System.out.println("6. Mie Goreng - Rp 18,000");
             System.out.println("===========================");
             System.out.println("Silakan pilih menu yang Anda inginkan.");
-            System.out.println("Tes1");
         }
     }
 }
