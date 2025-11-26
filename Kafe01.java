@@ -13,6 +13,6 @@ public class Kafe01 {
         System.out.println("Silakan pilih menu yang Anda inginkan.");
         }
     public static void main (String[] args){
-        
+        Menu();
     }
 }
