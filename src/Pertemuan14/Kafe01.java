@@ -50,17 +50,27 @@ public static int hitungTotalHarga (int pilihanMenu, int banyakItem, String kode
     public static void main (String[] args){
         Scanner sc = new Scanner(System.in);
         Menu("Andi", true, "diskon50");
-        
+        int pilihanMenu = 0;
+        int banyakItem = 0;
+        int totalItem = 0;
+        String memilihMenu = "Y";
+        while (memilihMenu.equalsIgnoreCase("Y")){
         System.out.print("\nMasukkan nomor menu yang ingin anda pesan: ");
-        int pilihanMenu = sc.nextInt();
+        pilihanMenu = sc.nextInt();
         System.out.print("Masukkan jumlah item yang ingin dipesan: ");
-        int banyakItem = sc.nextInt();
+        banyakItem = sc.nextInt();
+        totalItem += banyakItem;
         sc.nextLine();
+        System.out.println("Apakah masih ingin memilih menu?(Y/N)");
+        memilihMenu = sc.nextLine();
+
+        }   
         System.out.print("Masukkan kode promo: ");
         String kodePromo = sc.nextLine();
 
         int totalHarga = hitungTotalHarga(pilihanMenu, banyakItem, kodePromo);
 
         System.out.println("Total harga untuk pesanan anda: Rp."+totalHarga);
+        System.out.println("Total seluruh pesanan: "+totalItem);
     }
 }
